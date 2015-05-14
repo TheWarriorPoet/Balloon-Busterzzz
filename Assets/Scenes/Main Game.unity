@@ -226,7 +226,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 232887961}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.39306557, y: 20.2321815, z: 0}
+  m_LocalPosition: {x: -1.39999998, y: 20.8999996, z: 0}
   m_LocalScale: {x: 74.9899979, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 530494932}
@@ -549,7 +549,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1373213882}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.20000005, y: -15.3299999, z: 0}
+  m_LocalPosition: {x: -1.20000005, y: -16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 175857765}
@@ -568,6 +568,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcfb3cf542279ae4b87bd0b61479a1a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Speed: 40
+  JumpForce: 750
 --- !u!50 &1373213885
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -578,7 +580,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
-  m_FixedAngle: 0
+  m_FixedAngle: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -853,7 +855,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2144332242}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.39306557, y: -19.7678185, z: 0}
+  m_LocalPosition: {x: -1.39999998, y: -20.2999992, z: 0}
   m_LocalScale: {x: 74.9899979, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 530494932}
