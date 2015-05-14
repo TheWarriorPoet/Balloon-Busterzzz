@@ -1,0 +1,44 @@
+Initialize engine version: 5.0.2f1 (0b02744d4013)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 780M   (ID=0x119f)
+    Vendor:   NVIDIA
+    VRAM:     3072 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: E:\Cloud Storage\OneDrive\Game Developments\Git Repositories\Balloon Busterzzz\Balloon Busterzzz 140515_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading E:\Cloud Storage\OneDrive\Game Developments\Git Repositories\Balloon Busterzzz\Balloon Busterzzz 140515_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: E:\Cloud Storage\OneDrive\Game Developments\Git Repositories\Balloon Busterzzz\Balloon Busterzzz 140515_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading E:\Cloud Storage\OneDrive\Game Developments\Git Repositories\Balloon Busterzzz\Balloon Busterzzz 140515_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: E:\Cloud Storage\OneDrive\Game Developments\Git Repositories\Balloon Busterzzz\Balloon Busterzzz 140515_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading E:\Cloud Storage\OneDrive\Game Developments\Git Repositories\Balloon Busterzzz\Balloon Busterzzz 140515_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: E:\Cloud Storage\OneDrive\Game Developments\Git Repositories\Balloon Busterzzz\Balloon Busterzzz 140515_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading E:\Cloud Storage\OneDrive\Game Developments\Git Repositories\Balloon Busterzzz\Balloon Busterzzz 140515_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+- Completed reload, in  0.047 seconds
+desktop: 2560x1440 59Hz; virtual: 6400x1440 at -1920,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: E:\Cloud Storage\OneDrive\Game Developments\Git Repositories\Balloon Busterzzz\Balloon Busterzzz 140515_Data\Managed\System.Core.dll (this message is harmless)
+Initialize engine version: 5.0.2f1 (0b02744d4013)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 780M   (ID=0x119f)
+    Vendor:   NVIDIA
+    VRAM:     3072 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: E:\Cloud Storage\OneDrive\Game Developments\Git Repositories\Balloon Busterzzz\Balloon Busterzzz 140515_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading E:\Cloud Storage\OneDrive\Game Developments\Git Repositories\Balloon Busterzzz\Balloon Busterzzz 140515_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: E:\Cloud Storage\OneDrive\Game Developments\Git Repositories\Balloon Busterzzz\Balloon Busterzzz 140515_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading E:\Cloud Storage\OneDrive\Game Developments\Git Repositories\Balloon Busterzzz\Balloon Busterzzz 140515_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: E:\Cloud Storage\OneDrive\Game Developments\Git Repositories\Balloon Busterzzz\Balloon Busterzzz 140515_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading E:\Cloud Storage\OneDrive\Game Developments\Git Repositories\Balloon Busterzzz\Balloon Busterzzz 140515_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: E:\Cloud Storage\OneDrive\Game Developments\Git Repositories\Balloon Busterzzz\Balloon Busterzzz 140515_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading E:\Cloud Storage\OneDrive\Game Developments\Git Repositories\Balloon Busterzzz\Balloon Busterzzz 140515_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+- Completed reload, in  0.057 seconds
+desktop: 2560x1440 59Hz; virtual: 6400x1440 at -1920,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: E:\Cloud Storage\OneDrive\Game Developments\Git Repositories\Balloon Busterzzz\Balloon Busterzzz 140515_Data\Managed\System.Core.dll (this message is harmless)

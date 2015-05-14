@@ -2,6 +2,8 @@
 using System.Collections;
 
 public class Player : MonoBehaviour {
+    public GameObject PlayerBalloon = null;
+    public Balloon BalloonScript = null;
 
     public float Speed = 10.0f;
     public float JumpForce = 100.0f;
@@ -12,7 +14,7 @@ public class Player : MonoBehaviour {
     private Vector2 position = Vector2.zero;
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
         _myGameManager = GameManager.instance;
         _myRigidBody2D = GetComponent<Rigidbody2D>();
         _myTransform = transform;
