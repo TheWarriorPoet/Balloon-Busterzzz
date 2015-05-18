@@ -26,6 +26,10 @@ public class Player : MonoBehaviour {
         {
             if (_myRigidBody2D != null) { _myRigidBody2D.AddRelativeForce(new Vector2(0.0f, JumpForce)); } else Debug.Log("_myRigidBody2D is null");
         }
+		if(Input.GetButtonDown("Fire1"))
+		{
+			GameObject tempObj = (GameObject)Instantiate(BalloonScript.Power.Primary,gameObject.transform.position , gameObject.transform.rotation);
+		}
         float translation = Input.GetAxis("Horizontal") * Speed;
         translation *= Time.deltaTime;
         _myTransform.Translate(translation, 0, 0);
