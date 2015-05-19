@@ -7,8 +7,10 @@ public class Player : MonoBehaviour {
 
     public float Speed = 10.0f;
     public float JumpForce = 100.0f;
+	public float FlightForce = 100.0f;
 
 	public bool IsLeft;
+	public bool CanFly = true;
 
     private GameManager _myGameManager = null;
     private Rigidbody2D _myRigidBody2D = null;
@@ -30,10 +32,21 @@ public class Player : MonoBehaviour {
 		if (Input.GetAxis ("Horizontal") > 0) {
 			IsLeft = false;
 		}
-        if (Input.GetButtonDown("Jump") && _myRigidBody2D.velocity.y == 0)
+		if (Input.GetButtonDown("Jump") && _myRigidBody2D != null)
         {
-            if (_myRigidBody2D != null) { _myRigidBody2D.AddRelativeForce(new Vector2(0.0f, JumpForce)); } else Debug.Log("_myRigidBody2D is null");
+			if (!CanFly && _myRigidBody2D.velocity.y == 0)
+			{
+				_myRigidBody2D.AddRelativeForce(new Vector2(0.0f, JumpForce));
+			}
+			else if (CanFly)
+			{
+				_myRigidBody2D.AddRelativeForce(new Vector2(0.0f, FlightForce));
+			}
         }
+		else
+		{
+			Debug.Log("_myRigidBody2D is null");
+		}
 		if(Input.GetButtonDown("Fire1"))
 		{
 

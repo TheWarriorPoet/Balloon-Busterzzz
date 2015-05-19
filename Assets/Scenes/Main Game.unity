@@ -615,8 +615,10 @@ MonoBehaviour:
   PlayerBalloon: {fileID: 129850, guid: 94af4f7124e8dea4aa261506453c4061, type: 2}
   BalloonScript: {fileID: 1712676935}
   Speed: 40
-  JumpForce: 750
+  JumpForce: 400
+  FlightForce: 400
   IsLeft: 0
+  CanFly: 1
 --- !u!50 &1373213885
 Rigidbody2D:
   m_ObjectHideFlags: 0
