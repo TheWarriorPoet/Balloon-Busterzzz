@@ -26,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 105512}
   m_LocalRotation: {x: 2.84217094e-14, y: -5.68434189e-14, z: -.167432889, w: .985883474}
-  m_LocalPosition: {x: -18.4400005, y: -13.4399996, z: -4.82000017}
+  m_LocalPosition: {x: -17.9300003, y: -12.6199999, z: -4.82000017}
   m_LocalScale: {x: .532749593, y: .532749593, z: .532749593}
   m_Children: []
   m_Father: {fileID: 0}
@@ -39,7 +39,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 105512}
   m_Mass: 1
   m_LinearDrag: 5
-  m_AngularDrag: .0500000007
+  m_AngularDrag: 10
   m_GravityScale: -2
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -98,7 +98,7 @@ SpringJoint2D:
   m_Enabled: 1
   m_EnableCollision: 0
   m_ConnectedRigidBody: {fileID: 0}
-  m_Anchor: {x: 0, y: 0}
+  m_Anchor: {x: 0, y: -1.79999995}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_Distance: .100000001
   m_DampingRatio: .5
