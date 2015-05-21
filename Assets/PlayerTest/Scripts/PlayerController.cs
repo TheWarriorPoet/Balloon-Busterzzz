@@ -62,6 +62,7 @@ public class PlayerController : MonoBehaviour {
 			if(Input.GetAxis("JumpP1") >0  && !jumping)
 			{
 				velocity.y =+ JumpForce;
+				jumping = true;
 			}
 
 			if(Input.GetButtonDown("Fire1P1"))
@@ -95,6 +96,7 @@ public class PlayerController : MonoBehaviour {
 			if(Input.GetAxis("JumpP2") >0  && !jumping)
 			{
 				velocity.y =+ JumpForce;
+				jumping = true;
 			}
 			if(Input.GetButtonDown("Fire1P2"))
 			{
