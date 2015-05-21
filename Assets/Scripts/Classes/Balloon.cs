@@ -5,6 +5,8 @@ public class Balloon : MonoBehaviour {
 
 	public float m_fHealth;
 	public BalloonPowers Power;
+	public GameObject gameObject;
+
 	// Use this for initialization
 	void Start () {
 		Power = new RedBalloon();
