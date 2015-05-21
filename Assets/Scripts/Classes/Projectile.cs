@@ -28,14 +28,14 @@ public class Projectile : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
-
+		//print ("Player has collided with Trigger");
 		if (other.tag == "Player" && other.gameObject != m_oCreator) //Will need to introduce a way to ensure it doesn't collide with its creator
 		{
 			print ("Player has collided with Trigger");
-			// other.GetComponent<Player>().BalloonScript.AlterHealth(m_fDamage); //Must change value!!!!!
+			other.gameObject.transform.parent.GetComponent<Balloon>().AlterHealth(m_fDamage);
 			if(DestroyOnContact)
 			{
-				// Destroy(gameObject);
+				Destroy(gameObject.transform.parent.gameObject);
 
 			}
 		}
