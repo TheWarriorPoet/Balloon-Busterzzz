@@ -95,7 +95,9 @@ public class PlayerController : MonoBehaviour {
 			break;
 		}
 
-		velocity.y -= Gravity*Time.deltaTime;
+		if (characterController.collisionFlags == CollisionFlags.None) {
+			velocity.y -= Gravity * Time.deltaTime;
+		}
 		if (velocity.y < TerminalVelocity) {
 			velocity.y = TerminalVelocity;
 		}
@@ -107,6 +109,9 @@ public class PlayerController : MonoBehaviour {
 
 
 		CharacterAnimator.SetBool("running",running);
+		CharacterAnimator.SetBool("jumping",jumping);
+		//print (velocity.y.ToString ());
+		CharacterAnimator.SetFloat ("yVel",velocity.y);
 
 
 	}
