@@ -50,6 +50,7 @@ public class PlayerController : MonoBehaviour {
 	void Update () {
 		velocity.x = 0;
 		running = false;
+		jumping = (characterController.collisionFlags == CollisionFlags.None);
 
 		switch (playerID) {
 		case 0:
@@ -135,4 +136,7 @@ public class PlayerController : MonoBehaviour {
 
 
 	}
+
+	void OnCollisionEnter(Collision collision){print ("ouch");}
+
 }
