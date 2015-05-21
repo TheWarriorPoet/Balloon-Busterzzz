@@ -137,6 +137,6 @@ public class PlayerController : MonoBehaviour {
 
 	}
 
-	void OnCollisionEnter(Collision collision){print ("ouch");}
+
 
 }
