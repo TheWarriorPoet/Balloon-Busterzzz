@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour {
 	public Animator CharacterAnimator;
 
 
-	private Rigidbody myRigidBody;
+	private Rigidbody2D myRigidBody;
 	private CharacterController characterController;
 	private Vector2 velocity = new Vector2(0f,0f);
 	private bool isLeft = true;
