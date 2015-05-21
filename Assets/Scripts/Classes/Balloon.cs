@@ -6,6 +6,7 @@ public class Balloon : MonoBehaviour {
 	public float m_fHealth;
 	public BalloonPowers Power;
 	public GameObject gameObject;
+	public float balloonSizeOffset = 20;
 
 	// Use this for initialization
 	void Start () {
@@ -17,6 +18,11 @@ public class Balloon : MonoBehaviour {
 	if (m_fHealth <= 0) 
 		{
 			//Destroy This Balloon
+		}
+
+		if (gameObject != null)
+		{
+			gameObject.transform.localScale = new Vector3(m_fHealth / balloonSizeOffset, m_fHealth / balloonSizeOffset, m_fHealth / balloonSizeOffset);
 		}
 	}
 

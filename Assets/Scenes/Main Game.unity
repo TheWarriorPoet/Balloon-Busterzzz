@@ -870,6 +870,10 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: -3.63797881e-11, y: 0, z: 0}
+--- !u!1 &1633558586 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 107900, guid: 09e4a68280ecd12419b3e9df8a7be9c1, type: 2}
+  m_PrefabInternal: {fileID: 2128694501}
 --- !u!1 &1712676930
 GameObject:
   m_ObjectHideFlags: 0
@@ -957,6 +961,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_fHealth: 0
   gameObject: {fileID: 0}
+  balloonSizeOffset: 20
 --- !u!1 &2049417148
 GameObject:
   m_ObjectHideFlags: 0
@@ -1070,6 +1075,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11428380, guid: 09e4a68280ecd12419b3e9df8a7be9c1, type: 2}
+      propertyPath: gameObject
+      value: 
+      objectReference: {fileID: 1633558586}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 09e4a68280ecd12419b3e9df8a7be9c1, type: 2}
   m_IsPrefabParent: 0
