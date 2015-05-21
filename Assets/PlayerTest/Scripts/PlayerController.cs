@@ -5,6 +5,10 @@ public class PlayerController : MonoBehaviour {
 
 	public float CharacterSpeed = 470.0f;
 	public Animator CharacterAnimator;
+	public float JumpForce = 10f;
+	public float TerminalVelocity = -50f;
+	public float Gravity = 9.8f;
+
 
 
 	private Rigidbody2D myRigidBody;
@@ -13,6 +17,7 @@ public class PlayerController : MonoBehaviour {
 	private bool isLeft = true;
 	private bool running = false;
 	public int playerID = 0;
+	private bool jumping = false;
 
 
 	void Start () {
@@ -54,6 +59,11 @@ public class PlayerController : MonoBehaviour {
 			if (Input.GetAxis ("HorizontalP1") < 0) {
 				MoveRight ();
 			}
+			if(Input.GetAxis("JumpP1") >0  && !jumping)
+			{
+				velocity.y =+ JumpForce;
+			}
+
 			if(Input.GetButtonDown("Fire1P1"))
 			{
 				if(isLeft)
@@ -82,6 +92,10 @@ public class PlayerController : MonoBehaviour {
 			if (Input.GetAxis ("HorizontalP2") < 0) {
 				MoveRight ();
 			}
+			if(Input.GetAxis("JumpP2") >0  && !jumping)
+			{
+				velocity.y =+ JumpForce;
+			}
 			if(Input.GetButtonDown("Fire1P2"))
 			{
 				if(isLeft)
@@ -104,7 +118,12 @@ public class PlayerController : MonoBehaviour {
 			break;
 		}
 
-		characterController.SimpleMove (velocity);
+		velocity.y -= Gravity*Time.deltaTime;
+		if (velocity.y < TerminalVelocity) {
+			velocity.y = TerminalVelocity;
+		}
+
+		characterController.Move(new Vector2(velocity.x * Time.deltaTime,velocity.y*Time.deltaTime));
 	
 
 
