@@ -147,7 +147,7 @@ CircleCollider2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 195604}
   m_Enabled: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ee1a911281d96f340bbbde0a3f096382, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -179,7 +179,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_fDamage: 5
   m_fDamagePeriod: 0
+  BounceCap: 5
   DestroyOnContact: 1
+  m_oCreator: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

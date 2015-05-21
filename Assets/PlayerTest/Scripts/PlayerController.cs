@@ -61,11 +61,13 @@ public class PlayerController : MonoBehaviour {
 					Vector2 tempPos = gameObject.transform.position;
 					tempPos.x -= 1;
 					GameObject tempObj = (GameObject)Instantiate(GetComponent<Balloon>().Power.Primary, tempPos, gameObject.transform.rotation);
+					tempObj.transform.GetChild (0).GetComponent<Projectile>().m_oCreator = playerID;
 					Vector2 tempVec = characterController.velocity;
 					tempVec.x += -1000;
 					tempObj.GetComponent<Rigidbody2D>().AddForce(tempVec);
 				}else{
 					GameObject tempObj = (GameObject)Instantiate(GetComponent<Balloon>().Power.Primary, gameObject.transform.position , gameObject.transform.rotation);
+					tempObj.transform.GetChild (0).GetComponent<Projectile>().m_oCreator = playerID;
 					Vector2 tempVec = characterController.velocity;
 					tempVec.x += 1000;
 					tempObj.GetComponent<Rigidbody2D>().AddForce(tempVec);
@@ -87,11 +89,13 @@ public class PlayerController : MonoBehaviour {
 					Vector2 tempPos = gameObject.transform.position;
 					tempPos.x -= 1;
 					GameObject tempObj = (GameObject)Instantiate(GetComponent<Balloon>().Power.Primary, tempPos, gameObject.transform.rotation);
+					tempObj.transform.GetChild (0).GetComponent<Projectile>().m_oCreator = playerID;
 					Vector2 tempVec = characterController.velocity;
 					tempVec.x += -1000;
 					tempObj.GetComponent<Rigidbody2D>().AddForce(tempVec);
 				}else{
 					GameObject tempObj = (GameObject)Instantiate(GetComponent<Balloon>().Power.Primary, gameObject.transform.position , gameObject.transform.rotation);
+					tempObj.transform.GetChild (0).GetComponent<Projectile>().m_oCreator = playerID;
 					Vector2 tempVec = characterController.velocity;
 					tempVec.x += 1000;
 					tempObj.GetComponent<Rigidbody2D>().AddForce(tempVec);
