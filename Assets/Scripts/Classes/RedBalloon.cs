@@ -6,6 +6,7 @@ using UnityEngine;
 		public RedBalloon ()
 		{
 			Primary = (GameObject)Resources.Load("Fireball");
+		Cooldown = 1.5f;
 
 		}
 	}

@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour {
 	public int playerID = 0;
 	private bool jumping = false;
 
+	private float FireCooldown;
+
 
 	void Start () {
 		characterController = this.GetComponent<CharacterController> ();
@@ -48,6 +50,7 @@ public class PlayerController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		FireCooldown -= Time.deltaTime;
 		velocity.x = 0;
 		running = false;
 
@@ -67,22 +70,7 @@ public class PlayerController : MonoBehaviour {
 
 			if(Input.GetButtonDown("Fire1P1"))
 			{
-				if(isLeft)
-				{
-					Vector2 tempPos = gameObject.transform.position;
-					tempPos.x -= 1;
-					GameObject tempObj = (GameObject)Instantiate(GetComponent<Balloon>().Power.Primary, tempPos, gameObject.transform.rotation);
-					tempObj.transform.GetChild (0).GetComponent<Projectile>().m_oCreator = playerID;
-					Vector2 tempVec = characterController.velocity;
-					tempVec.x += -1000;
-					tempObj.GetComponent<Rigidbody2D>().AddForce(tempVec);
-				}else{
-					GameObject tempObj = (GameObject)Instantiate(GetComponent<Balloon>().Power.Primary, gameObject.transform.position , gameObject.transform.rotation);
-					tempObj.transform.GetChild (0).GetComponent<Projectile>().m_oCreator = playerID;
-					Vector2 tempVec = characterController.velocity;
-					tempVec.x += 1000;
-					tempObj.GetComponent<Rigidbody2D>().AddForce(tempVec);
-				}
+				FireProj ();
 			}
 		
 			break;
@@ -100,22 +88,7 @@ public class PlayerController : MonoBehaviour {
 			}
 			if(Input.GetButtonDown("Fire1P2"))
 			{
-				if(isLeft)
-				{
-					Vector2 tempPos = gameObject.transform.position;
-					tempPos.x -= 1;
-					GameObject tempObj = (GameObject)Instantiate(GetComponent<Balloon>().Power.Primary, tempPos, gameObject.transform.rotation);
-					tempObj.transform.GetChild (0).GetComponent<Projectile>().m_oCreator = playerID;
-					Vector2 tempVec = characterController.velocity;
-					tempVec.x += -1000;
-					tempObj.GetComponent<Rigidbody2D>().AddForce(tempVec);
-				}else{
-					GameObject tempObj = (GameObject)Instantiate(GetComponent<Balloon>().Power.Primary, gameObject.transform.position , gameObject.transform.rotation);
-					tempObj.transform.GetChild (0).GetComponent<Projectile>().m_oCreator = playerID;
-					Vector2 tempVec = characterController.velocity;
-					tempVec.x += 1000;
-					tempObj.GetComponent<Rigidbody2D>().AddForce(tempVec);
-				}
+				FireProj ();
 			}
 			break;
 		}
@@ -134,5 +107,26 @@ public class PlayerController : MonoBehaviour {
 		CharacterAnimator.SetBool("running",running);
 
 
+	}
+	void FireProj()
+	{
+		if (FireCooldown < 0) {
+			if (isLeft) {
+				Vector2 tempPos = gameObject.transform.position;
+				tempPos.x -= 1;
+				GameObject tempObj = (GameObject)Instantiate (GetComponent<Balloon> ().Power.Primary, tempPos, gameObject.transform.rotation);
+				tempObj.transform.GetChild (0).GetComponent<Projectile> ().m_oCreator = playerID;
+				Vector2 tempVec = characterController.velocity;
+				tempVec.x += -1000;
+				tempObj.GetComponent<Rigidbody2D> ().AddForce (tempVec);
+			} else {
+				GameObject tempObj = (GameObject)Instantiate (GetComponent<Balloon> ().Power.Primary, gameObject.transform.position, gameObject.transform.rotation);
+				tempObj.transform.GetChild (0).GetComponent<Projectile> ().m_oCreator = playerID;
+				Vector2 tempVec = characterController.velocity;
+				tempVec.x += 1000;
+				tempObj.GetComponent<Rigidbody2D> ().AddForce (tempVec);
+			}
+			FireCooldown = gameObject.GetComponent<Balloon>().Power.Cooldown;
+		}
 	}
 }
