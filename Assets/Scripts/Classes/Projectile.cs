@@ -28,7 +28,7 @@ public class Projectile : MonoBehaviour {
 		}
 	}
 
-	void OnTriggerEnter2D(Collider2D other)
+	void OnTriggerEnter(Collider other)
 	{
 		BounceCount += 1;
 		//print ("Player has collided with Trigger");

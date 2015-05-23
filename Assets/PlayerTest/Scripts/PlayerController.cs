@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour {
 
 
 
-	private Rigidbody2D myRigidBody;
+	private Rigidbody myRigidBody;
 	private CharacterController characterController;
 	private Vector2 velocity = new Vector2(0f,0f);
 	private bool isLeft = true;
@@ -126,13 +126,13 @@ public class PlayerController : MonoBehaviour {
 				tempObj.transform.GetChild (0).GetComponent<Projectile> ().m_oCreator = playerID;
 				Vector2 tempVec = characterController.velocity;
 				tempVec.x += -1000;
-				tempObj.GetComponent<Rigidbody2D> ().AddForce (tempVec);
+				tempObj.GetComponent<Rigidbody> ().AddForce (tempVec);
 			} else {
 				GameObject tempObj = (GameObject)Instantiate (GetComponent<Balloon> ().Power.Primary, gameObject.transform.position, gameObject.transform.rotation);
 				tempObj.transform.GetChild (0).GetComponent<Projectile> ().m_oCreator = playerID;
 				Vector2 tempVec = characterController.velocity;
 				tempVec.x += 1000;
-				tempObj.GetComponent<Rigidbody2D> ().AddForce (tempVec);
+				tempObj.GetComponent<Rigidbody> ().AddForce (tempVec);
 			}
 			FireCooldown = gameObject.GetComponent<Balloon>().Power.Cooldown;
 		}
