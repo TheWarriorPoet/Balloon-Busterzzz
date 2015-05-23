@@ -18,7 +18,6 @@ public class PlayerController : MonoBehaviour {
 	private bool running = false;
 	public int playerID = 0;
 	private bool jumping = false;
-
 	private float FireCooldown;
 
 
@@ -50,9 +49,10 @@ public class PlayerController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		FireCooldown -= Time.deltaTime;
 		velocity.x = 0;
 		running = false;
+		jumping = (characterController.collisionFlags == CollisionFlags.None);
+		FireCooldown -= Time.deltaTime;
 
 		switch (playerID) {
 		case 0:
@@ -71,6 +71,7 @@ public class PlayerController : MonoBehaviour {
 			if(Input.GetButtonDown("Fire1P1"))
 			{
 				FireProj ();
+
 			}
 		
 			break;
@@ -89,11 +90,14 @@ public class PlayerController : MonoBehaviour {
 			if(Input.GetButtonDown("Fire1P2"))
 			{
 				FireProj ();
+
 			}
 			break;
 		}
 
-		velocity.y -= Gravity*Time.deltaTime;
+		if (characterController.collisionFlags == CollisionFlags.None) {
+			velocity.y -= Gravity * Time.deltaTime;
+		}
 		if (velocity.y < TerminalVelocity) {
 			velocity.y = TerminalVelocity;
 		}
@@ -105,9 +109,13 @@ public class PlayerController : MonoBehaviour {
 
 
 		CharacterAnimator.SetBool("running",running);
+		CharacterAnimator.SetBool("jumping",jumping);
+		//print (velocity.y.ToString ());
+		CharacterAnimator.SetFloat ("yVel",velocity.y);
 
 
 	}
+
 	void FireProj()
 	{
 		if (FireCooldown < 0) {
@@ -129,4 +137,7 @@ public class PlayerController : MonoBehaviour {
 			FireCooldown = gameObject.GetComponent<Balloon>().Power.Cooldown;
 		}
 	}
+
+
+
 }
