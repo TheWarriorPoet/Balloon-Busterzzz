@@ -13,14 +13,14 @@ public class Player : MonoBehaviour {
 	public bool CanFly = true;
 
     private GameManager _myGameManager = null;
-    private Rigidbody2D _myRigidBody2D = null;
+    private Rigidbody _myRigidBody = null;
     private Transform _myTransform = null;
     private Vector2 position = Vector2.zero;
 
 	// Use this for initialization
 	void Awake () {
         _myGameManager = GameManager.instance;
-        _myRigidBody2D = GetComponent<Rigidbody2D>();
+        _myRigidBody = GetComponent<Rigidbody>();
         _myTransform = transform;
 	}
 	
@@ -32,20 +32,20 @@ public class Player : MonoBehaviour {
 		if (Input.GetAxis ("Horizontal") > 0) {
 			IsLeft = false;
 		}
-		if (Input.GetButtonDown("Jump") && _myRigidBody2D != null)
+		if (Input.GetButtonDown("Jump") && _myRigidBody != null)
         {
-			if (!CanFly && _myRigidBody2D.velocity.y == 0)
+			if (!CanFly && _myRigidBody.velocity.y == 0)
 			{
-				_myRigidBody2D.AddRelativeForce(new Vector2(0.0f, JumpForce));
+				_myRigidBody.AddRelativeForce(new Vector2(0.0f, JumpForce));
 			}
 			else if (CanFly)
 			{
-				_myRigidBody2D.AddRelativeForce(new Vector2(0.0f, FlightForce));
+				_myRigidBody.AddRelativeForce(new Vector2(0.0f, FlightForce));
 			}
         }
 		else
 		{
-			Debug.Log("_myRigidBody2D is null");
+			Debug.Log("_myRigidBody is null");
 		}
 		if(Input.GetButtonDown("Fire1"))
 		{
