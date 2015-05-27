@@ -79,6 +79,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 442266}
   - 65: {fileID: 6574366}
+  - 65: {fileID: 6541030}
   m_Layer: 0
   m_Name: CollisionBox
   m_TagString: Player
@@ -105,7 +106,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 150862}
   m_LocalRotation: {x: 0, y: 6.99382269e-07, z: 0, w: 1}
-  m_LocalPosition: {x: -3.49000001, y: -13.5200005, z: 0}
+  m_LocalPosition: {x: 16.5, y: -15.8000002, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 486236}
@@ -180,6 +181,18 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+--- !u!65 &6541030
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 172418}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &6574366
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -238,7 +251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_fHealth: 10
-  gameObject: {fileID: 0}
+  gameObject: {fileID: 107900}
   balloonSizeOffset: 20
 --- !u!114 &11478580
 MonoBehaviour:
@@ -256,7 +269,7 @@ MonoBehaviour:
   JumpForce: 10
   TerminalVelocity: -50
   Gravity: 9.80000019
-  playerID: 0
+  playerID: 1
 --- !u!143 &14325314
 CharacterController:
   m_ObjectHideFlags: 1
