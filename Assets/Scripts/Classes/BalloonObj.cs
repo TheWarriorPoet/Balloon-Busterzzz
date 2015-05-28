@@ -23,6 +23,7 @@ public class BalloonObj : MonoBehaviour {
 		if (other.tag == "Player")
 		{
 			other.gameObject.GetComponent<Balloon>().Power = BalloonType;
+			other.gameObject.GetComponent<Balloon>().m_fHealth = other.gameObject.GetComponent<Balloon>().m_fMaxHp;
 			print ("Player Balloon has changed to " + BalloonType);
 			GameObject.Destroy(gameObject);
 		}

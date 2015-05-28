@@ -5,6 +5,7 @@ public class Balloon : MonoBehaviour
 {
 
 	public float m_fHealth;
+	public float m_fMaxHp = 10;
 	public BalloonPowers Power;
 	public GameObject gameObject;
 	public float balloonSizeOffset = 20;
