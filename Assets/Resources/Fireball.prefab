@@ -156,6 +156,7 @@ MonoBehaviour:
   BounceCap: 5
   DestroyOnContact: 1
   m_oCreator: 0
+  m_fLifetime: 5
 --- !u!135 &13559630
 SphereCollider:
   m_ObjectHideFlags: 1
