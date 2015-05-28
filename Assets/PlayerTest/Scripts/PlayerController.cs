@@ -6,10 +6,10 @@ public class PlayerController : MonoBehaviour {
 	public float CharacterSpeed = 470.0f;
 	public Animator CharacterAnimator;
 	public float JumpForce = 10f;
+	public float FlightForce = 20f;
 	public float TerminalVelocity = -50f;
 	public float Gravity = 9.8f;
-
-
+	public bool CanFly = true;
 
 	private Rigidbody myRigidBody;
 	private CharacterController characterController;
