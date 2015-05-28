@@ -22,8 +22,8 @@ public class Spawner : MonoBehaviour {
 		
 		if (active) {
 			var newTransform = transform;
-			
-			GameObjectUtil.Instantiate(prefabs[Random.Range(0, prefabs.Length)], newTransform.position);
+			GameObject BalloonObj =(GameObject)Resources.Load("BalloonObj");
+			GameObjectUtil.Instantiate(BalloonObj, newTransform.position);
 			ResetDelay();
 		}
 		

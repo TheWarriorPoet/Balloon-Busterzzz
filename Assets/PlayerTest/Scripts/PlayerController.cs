@@ -5,8 +5,8 @@ public class PlayerController : MonoBehaviour
 {
 	public float CharacterSpeed = 470.0f;
 	public Animator CharacterAnimator;
-	public float JumpForce = 10f;
-	public float FlightForce = 20f;
+	public float JumpForce = 10.0f;
+	public float FlightForce = 10.0f;
 	public float TerminalVelocity = -50f;
 	public float Gravity = 9.8f;
 	public bool CanFly = true;
@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
 	private bool running = false;
 	public int playerID = 0;
 	private bool jumping = false;
+	private bool flying = false;
 	private float FireCooldown;
 
 
@@ -75,10 +76,18 @@ public class PlayerController : MonoBehaviour
 			{
 				MoveRight ();
 			}
-			if(Input.GetAxis("JumpP1") >0  && !jumping)
+			if (Input.GetButtonDown("JumpP1"))
 			{
-				velocity.y =+ JumpForce;
-				jumping = true;
+				if (!CanFly && characterController.velocity.y == 0 && !jumping)
+				{
+					velocity.y = JumpForce;
+					jumping = true;
+				}
+				else if (CanFly)
+				{
+					velocity.y = FlightForce;
+					flying = true;
+				}
 			}
 			if(Input.GetButtonDown("Fire1P1"))
 			{
@@ -94,10 +103,18 @@ public class PlayerController : MonoBehaviour
 			{
 				MoveRight ();
 			}
-			if(Input.GetAxis("JumpP2") >0  && !jumping)
+			if (Input.GetButtonDown("JumpP2"))
 			{
-				velocity.y =+ JumpForce;
-				jumping = true;
+				if (!CanFly && characterController.velocity.y == 0 && !jumping)
+				{
+					velocity.y = JumpForce;
+					jumping = true;
+				}
+				else if (CanFly)
+				{
+					velocity.y = FlightForce;
+					flying = true;
+				}
 			}
 			if(Input.GetButtonDown("Fire1P2"))
 			{
