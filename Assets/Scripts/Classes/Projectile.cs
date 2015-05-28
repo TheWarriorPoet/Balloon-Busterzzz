@@ -32,10 +32,10 @@ public class Projectile : MonoBehaviour {
 	{
 		BounceCount += 1;
 		//print ("Player has collided with Trigger");
-		if (other.tag == "Player" && other.gameObject.transform.parent.GetComponent<PlayerController>().playerID != m_oCreator)
+		if (other.tag == "Player" && other.gameObject.GetComponent<PlayerController>().playerID != m_oCreator)
 		{
 			print ("Player has collided with Trigger");
-			other.gameObject.transform.parent.GetComponent<Balloon>().AlterHealth(m_fDamage);
+			other.gameObject.GetComponent<Balloon>().AlterHealth(m_fDamage);
 			if(DestroyOnContact)
 			{
 				Destroy(gameObject.transform.parent.gameObject);
