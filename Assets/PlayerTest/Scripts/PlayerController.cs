@@ -140,7 +140,7 @@ public class PlayerController : MonoBehaviour
 
 	void FireProj()
 	{
-		if (FireCooldown < 0)
+		if (FireCooldown < 0 && CanFly)
 		{
 			if (isLeft)
 			{
