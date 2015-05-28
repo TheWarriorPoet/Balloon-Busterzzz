@@ -10,6 +10,9 @@ public class PlayerController : MonoBehaviour
 	public float TerminalVelocity = -50f;
 	public float Gravity = 9.8f;
 	public bool CanFly = true;
+	public AudioSource audioSource;
+	public AudioClip pop;
+	public AudioClip inflate;
 
 	private Rigidbody myRigidBody;
 	private CharacterController characterController;
@@ -25,6 +28,7 @@ public class PlayerController : MonoBehaviour
 	void Start ()
 	{
 		characterController = this.GetComponent<CharacterController>();
+		audioSource = this.GetComponent<AudioSource>();
 	}
 
 	void MoveLeft()
@@ -58,10 +62,12 @@ public class PlayerController : MonoBehaviour
 		// Check balloon health for ability to fly
 		if (GetComponent<Balloon>().m_fHealth == 0 && CanFly)
 		{
+			//audioSource.
 			CanFly = false;
 		}
 		else if (GetComponent<Balloon>().m_fHealth > 0 && !CanFly)
 		{
+			//audioSource.Play(inflate);
 			CanFly = true;
 		}
 

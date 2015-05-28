@@ -154,6 +154,8 @@ MonoBehaviour:
   TerminalVelocity: -50
   Gravity: 9.80000019
   CanFly: 1
+  pop: {fileID: 8300000, guid: 63e68ba2b53e49147867060ded29a7b2, type: 3}
+  inflate: {fileID: 8300000, guid: ac8b35f5b9d21ca429f9cc2360afcc41, type: 3}
   playerID: 1
 --- !u!143 &49932604
 CharacterController:
@@ -1233,6 +1235,8 @@ MonoBehaviour:
   TerminalVelocity: -50
   Gravity: 9.80000019
   CanFly: 1
+  pop: {fileID: 8300000, guid: 63e68ba2b53e49147867060ded29a7b2, type: 3}
+  inflate: {fileID: 8300000, guid: ac8b35f5b9d21ca429f9cc2360afcc41, type: 3}
   playerID: 0
 --- !u!143 &1414270582
 CharacterController:
