@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Balloon : MonoBehaviour {
+public class Balloon : MonoBehaviour
+{
 
 	public float m_fHealth;
 	public BalloonPowers Power;
@@ -9,15 +10,18 @@ public class Balloon : MonoBehaviour {
 	public float balloonSizeOffset = 20;
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+	{
 		Power = new RedBalloon();
 	}
 	
 	// Update is called once per frame
-	void Update () {
-	if (m_fHealth <= 0) 
+	void Update ()
+	{
+		if (m_fHealth < 0) 
 		{
 			//Destroy This Balloon
+			m_fHealth = 0;
 		}
 
 		if (gameObject != null)
